@@ -3,9 +3,21 @@
     <img alt="Vue logo" src="./assets/logo.png">
     <ci @modalCalled="parentOpenModal($event)"/>
     <hr>
+    <carousel class="w-min">
+      <span><img class="car-image" src="https://image.flaticon.com/icons/png/512/732/732084.png" alt="nike"></span>
+      <span><img class="car-image" src="https://image.flaticon.com/icons/png/512/732/732084.png" alt="nike"></span>
+      <span><img class="car-image" src="https://image.flaticon.com/icons/png/512/732/732084.png" alt="nike"></span>
+      <span><img class="car-image" src="https://image.flaticon.com/icons/png/512/732/732084.png" alt="nike"></span>
+      <span><img class="car-image" src="https://image.flaticon.com/icons/png/512/732/732084.png" alt="nike"></span>
+      <span><img class="car-image" src="https://image.flaticon.com/icons/png/512/732/732084.png" alt="nike"></span>
+      <span><img class="car-image" src="https://image.flaticon.com/icons/png/512/732/732084.png" alt="nike"></span>
+      <span><img class="car-image" src="https://image.flaticon.com/icons/png/512/732/732084.png" alt="nike"></span>
+    </carousel>
+    <hr>
     <button @click.prevent="irsenDataXaray">irsenDataXaray</button>
     <div v-for="(color, i) in colors" :key="i">
       <div :style="`background-color:${color}`" style="border: 1px solid; margin: 10px; padding: 20px; height: 50px">{{ color }}</div>
+
     </div>
   </div>
 </template>
@@ -64,5 +76,12 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+.car-image {
+  max-height: 4rem;
+}
+.w-min {
+  max-width: 300px;
 }
 </style>
